@@ -1,16 +1,18 @@
 require("pry")
-require_relative("../models/artists")
+require_relative("../models/artist")
 require_relative("../models/albums")
 
-# Artists.delete_all()
+# Artist.delete_all()
 # Albums.delete_all()
 
 artist1 = Artist.new({"name" => "Eminem"})
 artist1.save()
 
+# current top 5 albums
+
 album1 = Album.new({
   "title" => "Kamikaze",
-  "genre" => "Rap"
+  "genre" => "Rap",
   "artist_id" => artist1.id
   })
 album1.save()
@@ -18,10 +20,10 @@ album1.save()
 artist2 = Artist.new({"name" => "Various"})
 artist2.save()
 
-album1 = Album.new({
+album2 = Album.new({
   "title" => "The Greatest Showman",
-  "genre" => "Motion Picture Soundtrack"
-  "artist_id" => artist1.id
+  "genre" => "Motion Picture Soundtrack",
+  "artist_id" => artist2.id
   })
 album2.save()
 
@@ -30,8 +32,8 @@ artist3.save()
 
 album3 = Album.new({
   "title" => "Egypt Station",
-  "genre" => "Rock"
-  "artist_id" => artist1.id
+  "genre" => "Rock",
+  "artist_id" => artist3.id
   })
 album3.save()
 
@@ -40,8 +42,8 @@ artist4.save()
 
 album4 = Album.new({
   "title" => "Mamma Mia!",
-  "genre" => "Motion Picture Soundtrack"
-  "artist_id" => artist1.id
+  "genre" => "Motion Picture Soundtrack",
+  "artist_id" => artist4.id
   })
 album4.save()
 
@@ -50,8 +52,8 @@ artist5.save()
 
 album5 = Album.new({
   "title" => "Sweetener",
-  "genre" => "Pop"
-  "artist_id" => artist1.id
+  "genre" => "Pop",
+  "artist_id" => artist5.id
   })
 album5.save()
 
