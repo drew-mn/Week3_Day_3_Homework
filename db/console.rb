@@ -57,7 +57,11 @@ album5 = Album.new({
   })
 album5.save()
 
+Album.find(4)
+Album.find(album2.id)
 
+Artist.find(3)
+Artist.find(artist1.id)
 
 binding.pry
 nil
